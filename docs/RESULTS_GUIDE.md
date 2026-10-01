@@ -94,7 +94,5 @@ Five condensed CSV tables:
 
 ## Reports
 
-- [`docs/final_project_report.md`](final_project_report.md): complete methodology, results, discussion, limitations, and conclusion with representative figures/tables.
-- [`docs/final_project_summary.md`](final_project_summary.md): 1–2 page executive summary for presentation preparation.
+- [`docs/report/report.tex`](report/report.tex): LaTeX source of the full report (methodology, results, discussion), with figures in `docs/report/figures/`.
 - [`docs/REPRODUCIBILITY.md`](REPRODUCIBILITY.md): ordered regeneration workflow and expected outputs.
-- [`docs/PROJECT_STATUS.md`](PROJECT_STATUS.md): evidence-backed completion checklist.

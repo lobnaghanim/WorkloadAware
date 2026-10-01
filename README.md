@@ -108,9 +108,7 @@ See [RESULTS_GUIDE.md](docs/RESULTS_GUIDE.md) for field-level interpretation.
 
 - Publication figures: [`results/figures/`](results/figures/)
 - Condensed tables: [`results/tables/`](results/tables/)
-- Complete report: [docs/final_project_report.md](docs/final_project_report.md)
-- Executive summary: [docs/final_project_summary.md](docs/final_project_summary.md)
-- Current pipeline status: [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md)
+- Complete report (LaTeX source): [docs/report/report.tex](docs/report/report.tex), with figures in [`docs/report/figures/`](docs/report/figures/)
 
 ## Reproduction
 
@@ -122,5 +120,3 @@ For an inexpensive consistency check of already generated artifacts:
 python3 -m py_compile project/audit_project_results.py
 python3 project/audit_project_results.py
 ```
-
-Repository cleanup candidates are documented without deletion in [docs/CLEANUP_RECOMMENDATIONS.md](docs/CLEANUP_RECOMMENDATIONS.md).

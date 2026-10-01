@@ -41,8 +41,7 @@ This index maps each major project phase to its current authoritative scripts, p
 ## Reading order
 
 1. [`README.md`](../README.md)
-2. [`final_project_summary.md`](final_project_summary.md)
-3. [`final_project_report.md`](final_project_report.md)
-4. [`RESULTS_GUIDE.md`](RESULTS_GUIDE.md)
-5. [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
-6. [`FINAL_SUBMISSION_CHECKLIST.md`](FINAL_SUBMISSION_CHECKLIST.md)
+2. [`report/report.tex`](report/report.tex)
+3. [`RESULTS_GUIDE.md`](RESULTS_GUIDE.md)
+4. [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
+5. [`FINAL_SUBMISSION_CHECKLIST.md`](FINAL_SUBMISSION_CHECKLIST.md)
