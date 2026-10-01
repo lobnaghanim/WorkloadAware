@@ -44,4 +44,3 @@ This index maps each major project phase to its current authoritative scripts, p
 2. [`report/report.tex`](report/report.tex)
 3. [`RESULTS_GUIDE.md`](RESULTS_GUIDE.md)
 4. [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
-5. [`FINAL_SUBMISSION_CHECKLIST.md`](FINAL_SUBMISSION_CHECKLIST.md)
