@@ -1,0 +1,45 @@
+{
+    "area_summary": {
+        "chip_width": 36.405528086790774,
+        "chip_height": 36.405528086790774,
+        "total_chiplet_area": 1292.7999999999997,
+        "total_interposer_area": 1325.362475278112,
+        "time_taken": 0.024964570999145508
+    },
+    "power_summary": {
+        "total_power": 336.0,
+        "total_chiplet_power": 336.0,
+        "total_interposer_power": 0.0,
+        "time_taken": 0.03688168525695801
+    },
+    "link_summary": {
+        "lengths": {
+            "min": 1.274,
+            "avg": 1.2736102527122117,
+            "max": 1.274,
+            "histogram": {
+                "1.274": 24
+            }
+        },
+        "bandwidths": {
+            "min": 1004.0,
+            "avg": 1004.0,
+            "max": 1004.0,
+            "histogram": {
+                "1004.0": 24
+            }
+        },
+        "time_taken": 0.0005877017974853516
+    },
+    "latency": {
+        "min": 62,
+        "avg": 99.33333333333333,
+        "max": 174,
+        "time_taken": 0.04643368721008301
+    },
+    "throughput": {
+        "aggregate_throughput": 4016.0,
+        "time_taken": 0.0001850128173828125
+    },
+    "total_time_taken": 0.10906720161437988
+}

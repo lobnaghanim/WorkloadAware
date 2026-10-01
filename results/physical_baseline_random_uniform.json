@@ -1,0 +1,8 @@
+{
+  "workload": "random_uniform",
+  "avg_latency": 80.66666666666697,
+  "aggregate_throughput": 8605.71428571429,
+  "max_link_load": 14.933333333333342,
+  "total_routed_traffic": 341.33333333333684,
+  "traffic_wire_cost": 434.72563292576586
+}

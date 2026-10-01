@@ -1,0 +1,116 @@
+PROJECT REPRODUCIBILITY AND CONSISTENCY AUDIT
+=============================================
+
+1. Overall status
+-----------------
+Status: PASS
+Artifacts checked: 732
+Valid artifact records: 732
+Warnings: 0
+Failures: 0
+Large RapidChiplet/BookSim simulations were not rerun; stored artifacts were parsed and cross-checked.
+
+2. Input/workload validation
+----------------------------
+Canonical synthetic traffic files checked: 8.
+Seeded traffic files checked: 20; expected seeds=[42, 43, 44, 45, 46].
+STAGE workloads checked: 3.
+- gpt_pipeline: trace=stage/generated/rapidchiplet_representative/gpt_pipeline; ranks=16; mapping=one_to_one_rank_i_to_chiplet_i; normalization=scale largest converted flow to 8.0 using factor 1.892562984496124e-06 (reference=inputs/traffic_by_chiplet/traffic_project_random_uniform.json;inputs/traffic_by_chiplet/traffic_project_transpose.json;inputs/traffic_by_chiplet/traffic_project_permutation.json;inputs/traffic_by_chiplet/traffic_project_hotspot.json); collectives=stage_demo_ring_v1; units=equal_across_all_source_and_destination_unit_pairs.
+- gpt_fsdp: trace=stage/generated/rapidchiplet_representative/gpt_fsdp; ranks=16; mapping=one_to_one_rank_i_to_chiplet_i; normalization=scale largest converted flow to 8.0 using factor 4.75212895377129e-07 (reference=inputs/traffic_by_chiplet/traffic_project_random_uniform.json;inputs/traffic_by_chiplet/traffic_project_transpose.json;inputs/traffic_by_chiplet/traffic_project_permutation.json;inputs/traffic_by_chiplet/traffic_project_hotspot.json); collectives=stage_demo_ring_v1; units=equal_across_all_source_and_destination_unit_pairs.
+- moe_expert: trace=stage/generated/rapidchiplet_representative/moe_expert; ranks=16; mapping=one_to_one_rank_i_to_chiplet_i; normalization=scale largest converted flow to 8.0 using factor 9.353766949025711e-07 (reference=inputs/traffic_by_chiplet/traffic_project_random_uniform.json;inputs/traffic_by_chiplet/traffic_project_transpose.json;inputs/traffic_by_chiplet/traffic_project_permutation.json;inputs/traffic_by_chiplet/traffic_project_hotspot.json); collectives=stage_demo_ring_v1; units=equal_across_all_source_and_destination_unit_pairs.
+
+3. Optimizer-selection validation
+---------------------------------
+Logical Fixed/Workload-Aware selections checked: 168.
+Recorded max-load constraints checked: 119.
+Greedy-prefix comparisons checked: 112; mismatches=0.
+K1/K2/K4 requested_k values and actual_k<=requested_k were checked from exact stored selections.
+
+4. Physical-budget validation
+-----------------------------
+Every normalized selection was checked for cumulative selected wire <= its 5/15/25/45 mm budget.
+Mesh logical rows were checked for actual_k=0 through comparison validation.
+
+5. PHY validation
+-----------------
+All shortcut endpoints were checked against original mesh occupancy, duplicate endpoint reuse, duplicate chiplet pairs, and original mesh edges.
+
+6. Design/topology validation
+-----------------------------
+Logical shortcut designs checked: 168; identical lower-budget design reuses resolved: 3.
+Each checked design was required to contain 24+actual_k links, exact chiplet/PHY selection endpoints, a routing table, and matching workload traffic.
+Fixed topology signatures were required to be identical across workloads for each family/K/budget.
+
+7. BookSim-result validation
+---------------------------
+Logical policy result rows checked: 252; unique source JSONs parsed: 120.
+Each source JSON was checked for latency, throughput, booksim_simulation, and a complete numeric offered-load point.
+Low load was recomputed as the smallest complete numeric offered load. The derived latency knee was recomputed as the first tested load with packet latency >= 2x low-load latency.
+Documented duplicate-topology rows were resolved through source_result_file; no duplicate JSON was fabricated.
+
+8. Derived-metric validation
+----------------------------
+JSON/CSV or derived-gain mismatches: 0.
+Aggregate summary latency checks: 252.
+Separate-K/all-K projection checks: 2016.
+Final arithmetic-mean checks: 420.
+Latency gain vs Mesh/Fixed, hop gain, analytical gain, low-load metrics, last-stable metrics, knees, and summary values were recomputed with tolerance 1e-9.
+
+9. STAGE-conversion validation
+-----------------------------
+STAGE conversion_valid flags, rank counts, traffic/mapping paths, trace directories, mapping policy, collective expansion, unit distribution, and max-flow normalization metadata were checked against inventory records.
+
+10. Missing/inconsistent artifacts
+----------------------------------
+No critical inconsistencies found.
+No audit warnings.
+
+11. Reproduction commands
+-------------------------
+Ordered commands (documented only; not executed by this audit):
+1. python3 project/generate_fixed_workloads.py
+2. python3 project/generate_multiseed_workloads.py
+3. python3 project/select_k1_all.py
+4. python3 project/create_k1_all_designs.py
+5. python3 project/run_k1_booksim.py
+6. python3 project/summarize_k1_all.py
+7. python3 project/select_fixed_k1.py
+8. python3 project/create_fixed_k1_designs.py
+9. python3 project/run_fixed_k1_booksim.py
+10. python3 project/select_k2_workload_aware.py
+11. python3 project/select_fixed_k2.py
+12. python3 project/create_k2_workload_aware_designs.py
+13. python3 project/create_fixed_k2_designs.py
+14. python3 project/run_k2_workload_aware_booksim.py
+15. python3 project/run_fixed_k2_booksim.py
+16. python3 project/select_k4_workload_aware.py
+17. python3 project/select_fixed_k4.py
+18. python3 project/create_k4_workload_aware_designs.py
+19. python3 project/create_fixed_k4_designs.py
+20. python3 project/run_k4_workload_aware_booksim.py
+21. python3 project/run_fixed_k4_booksim.py
+22. python3 project/compare_k1_policies.py
+23. python3 project/compare_k2_policies.py
+24. python3 project/compare_k4_policies.py
+25. python3 project/compare_all_k.py
+26. python3 project/run_multiseed_analysis.py
+27. python3 project/inspect_stage_traces.py
+28. python3 project/convert_stage_to_traffic.py
+29. python3 project/run_stage_workload_aware_optimization.py
+30. python3 project/create_stage_workload_aware_designs.py
+31. python3 project/run_stage_workload_aware_booksim.py
+32. python3 project/create_stage_fixed_designs.py
+33. python3 project/run_stage_fixed_booksim.py
+34. python3 project/create_stage_mesh_baselines.py
+35. python3 project/run_stage_mesh_booksim.py
+36. python3 project/compare_stage_policies.py
+37. python3 project/analyze_physical_costs.py
+38. python3 project/generate_final_tables.py
+39. python3 project/generate_final_plots.py
+40. python3 project/analyze_final_results.py
+41. python3 project/audit_project_results.py
+
+12. Final audit verdict
+-----------------------
+PASS
+The verdict reflects stored-artifact traceability and inexpensive consistency checks, not a fresh rerun of large simulations.

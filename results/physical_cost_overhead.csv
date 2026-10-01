@@ -1,0 +1,4 @@
+record_type,architecture,source_design_file,chiplet_width_mm,chiplet_height_mm,chiplet_area_mm2,chiplet_power_w,phy_count,placement_footprint_width_mm,placement_footprint_height_mm,placement_footprint_area_mm2,absolute_area_difference_mm2,area_overhead_percent,absolute_power_difference_w,power_overhead_percent,phy_count_increase,phy_count_increase_percent
+architecture,4PHY,inputs/designs/design_project_mesh_4x4.json,8.79772697916911,8.79772697916911,77.40000000000002,20.5,4,35.64090791667644,35.64090791667644,1270.2743171250092,,,,,,
+architecture,8PHY,inputs/designs/design_project_physical_mesh_8phy.json,8.988882021697693,8.988882021697693,80.8,21.0,8,36.405528086790774,36.405528086790774,1325.362475278112,,,,,,
+overhead,8PHY_vs_4PHY,inputs/designs/design_project_mesh_4x4.json;inputs/designs/design_project_physical_mesh_8phy.json,,,,,,,,,3.3999999999999773,4.392764857881106,0.5,2.4390243902439024,4,100.0

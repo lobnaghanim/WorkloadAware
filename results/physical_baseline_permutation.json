@@ -1,0 +1,8 @@
+{
+  "workload": "permutation",
+  "avg_latency": 86.5,
+  "aggregate_throughput": 8032.0,
+  "max_link_load": 16.0,
+  "total_routed_traffic": 368.0,
+  "traffic_wire_cost": 468.6885729980937
+}

@@ -1,0 +1,8 @@
+{
+  "workload": "hotspot",
+  "avg_latency": 83.26515151515159,
+  "aggregate_throughput": 7091.799331103678,
+  "max_link_load": 18.121212121212118,
+  "total_routed_traffic": 353.2121212121238,
+  "traffic_wire_cost": 449.85457895798805
+}

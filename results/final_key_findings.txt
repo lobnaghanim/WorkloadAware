@@ -1,0 +1,87 @@
+FINAL QUANTITATIVE FINDINGS
+===========================
+
+Method note: all aggregate values below are arithmetic means of the completed logical configurations. 
+'Effectively equal' and 'negligible' use a descriptive +/-0.1% latency threshold; this is not a statistical test.
+The congestion metric is the derived latency knee from tested offered-load points.
+
+1. Main result
+--------------
+Across 84 logical workload/budget/requested_k configurations (48 synthetic, 36 STAGE), Workload-Aware improved on Mesh in 78/84 cases (92.86%) with a mean gain of 9.256%.
+Workload-Aware improved on Fixed in 55/84 cases (65.48%) with a mean gain of 4.231%.
+The best observed Workload-Aware gain vs Fixed was 24.752% at synthetic transpose B45 K=1; the worst was -6.693% at stage gpt_fsdp B45 K=2.
+
+Synthetic workload results:
+- hotspot: mean latencies Mesh/Fixed/Workload-Aware=83.813/77.274/75.866 cycles; mean hops=3.779/3.519/3.466; mean Workload-Aware gain vs Mesh=9.482%, vs Fixed=1.862%; best latency=67.794 cycles at B45 K=4 (actual_k=4, wire=44.197 mm); best gain vs Fixed=7.113% at B45 K=4.
+- permutation: mean latencies Mesh/Fixed/Workload-Aware=86.228/80.638/77.215 cycles; mean hops=3.865/3.647/3.525; mean Workload-Aware gain vs Mesh=10.453%, vs Fixed=4.307%; best latency=66.809 cycles at B45 K=4 (actual_k=3, wire=41.800 mm); best gain vs Fixed=13.474% at B45 K=4.
+- random_uniform: mean latencies Mesh/Fixed/Workload-Aware=80.786/74.968/74.968 cycles; mean hops=3.671/3.439/3.439; mean Workload-Aware gain vs Mesh=7.202%, vs Fixed=0.000%; best latency=70.854 cycles at B45 K=2 (actual_k=2, wire=43.747 mm); best gain vs Fixed=0.000% at B5 K=1.
+- transpose: mean latencies Mesh/Fixed/Workload-Aware=98.863/94.101/78.084 cycles; mean hops=4.316/4.126/3.503; mean Workload-Aware gain vs Mesh=21.018%, vs Fixed=17.000%; best latency=71.543 cycles at B45 K=1 (actual_k=1, wire=41.350 mm); best gain vs Fixed=24.752% at B45 K=1.
+Fixed beat Workload-Aware in 0/48 synthetic configurations; 18/48 were effectively equal by the descriptive threshold.
+Negative synthetic cases: none.
+
+2. Workload-awareness result
+----------------------------
+- B5 K=1: different chiplet-pair link sets for 1/4 workloads (25.0%); mean aware-vs-fixed gain when different=13.298%, when identical=0.000%.
+- B5 K=2: different chiplet-pair link sets for 1/4 workloads (25.0%); mean aware-vs-fixed gain when different=13.298%, when identical=0.000%.
+- B5 K=4: different chiplet-pair link sets for 1/4 workloads (25.0%); mean aware-vs-fixed gain when different=13.298%, when identical=0.000%.
+- B15 K=1: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=4.704%, when identical=0.000%.
+- B15 K=2: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=4.704%, when identical=0.000%.
+- B15 K=4: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=4.704%, when identical=0.000%.
+- B25 K=1: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=10.021%, when identical=0.000%.
+- B25 K=2: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=10.021%, when identical=0.000%.
+- B25 K=4: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=10.021%, when identical=0.000%.
+- B45 K=1: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=10.651%, when identical=0.000%.
+- B45 K=2: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=10.720%, when identical=0.000%.
+- B45 K=4: different chiplet-pair link sets for 3/4 workloads (75.0%); mean aware-vs-fixed gain when different=13.835%, when identical=0.000%.
+Overall, Fixed and Workload-Aware used different chiplet-pair link sets in 30/48 synthetic workload/K/budget cases (62.50%).
+
+3. K result
+-----------
+For synthetic Workload-Aware, 27/32 K transitions had <=0.1% absolute latency change, 27/32 added no actual link, and 0 worsened latency.
+For synthetic Fixed, 28/32 transitions were negligible, 28/32 added no actual link, and 0 worsened latency.
+Increasing requested_k therefore did not always increase actual_k or improve latency.
+actual_k < requested_k occurred for Fixed in 28/48 synthetic and 21/36 STAGE configurations; for Workload-Aware it occurred in 28/48 synthetic and 18/36 STAGE configurations.
+
+4. Wire-budget result
+---------------------
+Among synthetic Workload-Aware budget transitions, 3/36 retained the same link set and identical latency; for Fixed this occurred in 4/36 transitions.
+Mean synthetic Workload-Aware used wire rose from 4.794 mm at B5 to 36.531 mm at B45, while mean gain vs Mesh changed from 7.156% to 17.668%.
+A larger budget was only a constraint relaxation: the stored optimizer could stop early, so consumed wire and actual_k often remained unchanged.
+
+5. Congestion/knee result
+-------------------------
+A derived latency knee was comparable between Mesh and Workload-Aware in 48 configurations: Workload-Aware was higher in 19, lower in 3, and equal in 26.
+Across synthetic budget transitions, the Workload-Aware derived latency knee decreased in 3 comparable transitions; Fixed decreased in 0. Longer allowed wire therefore did not uniformly improve the knee.
+
+6. Multi-seed robustness
+-------------------------
+- hotspot: mean gain across K/budget seed summaries=8.239%, mean within-group standard deviation=1.181%, observed group min/max gains=3.246%/19.245%; unique topologies ranged 3-5, and actual_k ranged 1-4; the mean most-common-topology seed frequency was 36.7%.
+- permutation: mean gain across K/budget seed summaries=9.831%, mean within-group standard deviation=1.414%, observed group min/max gains=4.066%/25.452%; unique topologies ranged 2-5, and actual_k ranged 1-4; the mean most-common-topology seed frequency was 35.0%.
+The minimum reported gain across all randomized-seed groups was 3.246%; benefits persisted in these sampled seeds, but no statistical-significance test was performed.
+
+7. STAGE/DNN generalization
+---------------------------
+- gpt_fsdp: mean latencies Mesh/Fixed/Workload-Aware=58.093/53.030/53.332 cycles; mean hops=2.860/2.666/2.677; mean Workload-Aware gain vs Mesh=8.195%, vs Fixed=-0.698%; best vs-Fixed=5.838% at B45 K=1 (actual_k=1, wire=41.350 mm, derived knee=0.120).
+- gpt_pipeline: mean latencies Mesh/Fixed/Workload-Aware=45.888/45.637/43.909 cycles; mean hops=2.424/2.413/2.348; mean Workload-Aware gain vs Mesh=4.312%, vs Fixed=3.768%; best vs-Fixed=11.428% at B45 K=4 (actual_k=4, wire=39.403 mm, derived knee=0.116).
+- moe_expert: mean latencies Mesh/Fixed/Workload-Aware=47.808/47.451/45.834 cycles; mean hops=2.493/2.477/2.417; mean Workload-Aware gain vs Mesh=4.127%, vs Fixed=3.379%; best vs-Fixed=10.988% at B45 K=4 (actual_k=4, wire=39.403 mm, derived knee=0.098).
+Across STAGE, mean Workload-Aware gain was 5.545% vs Mesh and 2.150% vs Fixed. Fixed beat Workload-Aware in 5/36 cases; 9/36 were effectively equal.
+The synthetic observation--benefit depends on workload, budget, and whether extra links are actually selected--also appears in STAGE; it is not universal dominance.
+
+8. Physical-cost tradeoff
+-------------------------
+The actual 4PHY chiplet is 77.400 mm^2 and 20.500 W; the 8PHY chiplet is 80.800 mm^2 and 21.000 W. Capability overhead is 4.393% area, 2.439% power, and +4 PHYs (100.0%).
+Across 168 Fixed/Workload-Aware logical configurations, mean usage was 18.635 mm, actual_k=1.208, and 3.776% of the 64 spare PHY endpoints; mean descriptive efficiencies were 0.483 latency-gain percentage points/mm and 0.403 hop-gain percentage points/mm.
+Per-configuration added wire ranged 4.794-44.197 mm, and actual_k ranged 1-4.
+Using the stated descriptive <=0.1% transition criterion, 2 configurations added wire with negligible or negative incremental latency gain; 2 of those worsened latency.
+Capability overhead (providing four spare PHYs per chiplet) is separate from usage cost (wire and two PHY endpoints per selected shortcut).
+
+9. Limitations
+--------------
+The results cover the tested 4x4, 16-chiplet architecture, four wire budgets, K={1,2,4}, the listed synthetic/STAGE workloads, and the available randomized seeds.
+The derived latency knee is based on tested offered-load points and is not an exact throughput boundary. Empty/unobserved knees remain unavailable.
+Arithmetic means summarize heterogeneous workloads; they do not imply statistical significance or universal superiority. The 0.1% equality/negligibility threshold is descriptive.
+Physical optimizer metrics were reused as stored; missing metrics were not fabricated, and no topology was reselected.
+
+10. Final conclusion
+--------------------
+Workload-Aware shortcuts usually improved Mesh and averaged 4.231% over Fixed across all tested logical configurations, but Fixed sometimes won and many higher-requested-K configurations stopped at fewer links. The measured value of adaptation is workload- and budget-dependent, with observable diminishing returns. These performance gains require a 4.393% chiplet-area and 2.439% chiplet-power capability overhead in the project data, plus only the wire/PHY usage of shortcuts actually selected.

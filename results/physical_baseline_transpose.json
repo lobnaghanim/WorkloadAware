@@ -1,0 +1,8 @@
+{
+  "workload": "transpose",
+  "avg_latency": 99.33333333333333,
+  "aggregate_throughput": 4016.0,
+  "max_link_load": 24.0,
+  "total_routed_traffic": 320.0,
+  "traffic_wire_cost": 407.55528086790787
+}

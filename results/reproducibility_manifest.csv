@@ -1,0 +1,733 @@
+artifact_type,path,exists,valid,source,workload,requested_k,budget_mm,notes
+final_dataset,results/k1_policy_comparison.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/k2_policy_comparison.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/k4_policy_comparison.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/all_k_policy_comparison.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/all_k_summary.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/multiseed_results.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/multiseed_summary.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/stage_policy_comparison.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/stage_policy_summary.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/physical_cost_summary.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/physical_cost_overhead.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/final_result_summary.csv,True,True,completed analysis pipeline,,,,
+final_dataset,results/final_key_findings.txt,True,True,completed analysis pipeline,,,,
+final_table,results/tables/multiseed_robustness_final.csv,True,True,project/generate_final_tables.py,,,,
+final_table,results/tables/physical_overhead_summary.csv,True,True,project/generate_final_tables.py,,,,
+final_table,results/tables/selected_links_summary.csv,True,True,project/generate_final_tables.py,,,,
+final_table,results/tables/stage_policy_summary_final.csv,True,True,project/generate_final_tables.py,,,,
+final_table,results/tables/synthetic_policy_summary.csv,True,True,project/generate_final_tables.py,,,,
+final_figure,results/figures/actual_k_vs_requested_k_stage.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/actual_k_vs_requested_k_synthetic.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/multiseed_latency_gain_robustness.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/physical_capability_overhead_4phy_vs_8phy.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_aware_gain_vs_fixed_gpt_fsdp.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_aware_gain_vs_fixed_gpt_pipeline.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_aware_gain_vs_fixed_moe_expert.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_latency_comparison_gpt_fsdp.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_latency_comparison_gpt_pipeline.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_latency_comparison_moe_expert.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_hotspot.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_permutation.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_random_uniform.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_transpose.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_hotspot.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_permutation.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_random_uniform.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_transpose.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_hotspot.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_permutation.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_random_uniform.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_transpose.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_gain_vs_physical_wire.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_hotspot.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_permutation.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_random_uniform.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_transpose.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_hotspot.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_permutation.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_random_uniform.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_transpose.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_physical_wire.png,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/actual_k_vs_requested_k_stage.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/actual_k_vs_requested_k_synthetic.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/multiseed_latency_gain_robustness.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/physical_capability_overhead_4phy_vs_8phy.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_aware_gain_vs_fixed_gpt_fsdp.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_aware_gain_vs_fixed_gpt_pipeline.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_aware_gain_vs_fixed_moe_expert.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_latency_comparison_gpt_fsdp.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_latency_comparison_gpt_pipeline.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/stage_latency_comparison_moe_expert.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_hotspot.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_permutation.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_random_uniform.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_average_hops_transpose.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_hotspot.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_permutation.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_random_uniform.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_aware_gain_vs_fixed_transpose.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_hotspot.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_permutation.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_random_uniform.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_derived_latency_knee_transpose.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_gain_vs_physical_wire.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_hotspot.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_permutation.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_random_uniform.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_budget_transpose.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_hotspot.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_permutation.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_random_uniform.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_k_transpose.pdf,True,True,project/generate_final_plots.py,,,,
+final_figure,results/figures/synthetic_latency_vs_physical_wire.pdf,True,True,project/generate_final_plots.py,,,,
+baseline_design,inputs/designs/design_project_physical_mesh_8phy.json,True,True,project/create_physical_baseline.py,,,,
+optimizer_selection,results/k1_workload_aware_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k2_workload_aware_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k2_workload_aware_summary.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k4_workload_aware_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k4_workload_aware_summary.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k1_fixed_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k2_fixed_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k2_fixed_summary.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k4_fixed_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/k4_fixed_summary.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/stage_workload_aware_selections.csv,True,True,stored optimizer output,,,,
+optimizer_selection,results/stage_workload_aware_summary.csv,True,True,stored optimizer output,,,,
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,45,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,45,policy=workload_aware; actual_k=1; wire=41.349969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,45,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,45,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,45,policy=workload_aware; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,45,policy=workload_aware; actual_k=1; wire=41.349969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,45,policy=workload_aware; actual_k=2; wire=37.005528086791 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,45,policy=workload_aware; actual_k=2; wire=34.608307581366 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,45,policy=workload_aware; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,45,policy=workload_aware; actual_k=1; wire=41.349969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,45,policy=workload_aware; actual_k=3; wire=41.799969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,25,policy=workload_aware; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,45,policy=workload_aware; actual_k=4; wire=44.197189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,25,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,25,policy=workload_aware; actual_k=2; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,25,policy=workload_aware; actual_k=2; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,45,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,45,policy=workload_aware; actual_k=2; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,45,policy=workload_aware; actual_k=4; wire=39.402748592215 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,15,policy=workload_aware; actual_k=1; wire=13.933323032547 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,25,policy=workload_aware; actual_k=1; wire=20.674984548820 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,25,policy=workload_aware; actual_k=1; wire=20.674984548820 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,25,policy=workload_aware; actual_k=1; wire=20.674984548820 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,45,policy=workload_aware; actual_k=1; wire=41.349969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,45,policy=workload_aware; actual_k=1; wire=41.349969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,45,policy=workload_aware; actual_k=1; wire=41.349969097640 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,5,policy=workload_aware; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,15,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,25,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,25,policy=workload_aware; actual_k=2; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,25,policy=workload_aware; actual_k=2; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,45,policy=workload_aware; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,45,policy=workload_aware; actual_k=2; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,45,policy=workload_aware; actual_k=4; wire=39.402748592215 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:hotspot,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:permutation,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:transpose,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,synthetic:random_uniform,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:moe_expert,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_fsdp,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,1,45,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,2,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,5,policy=fixed; actual_k=1; wire=4.794441010849 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,15,policy=fixed; actual_k=1; wire=11.536102527122 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,25,policy=fixed; actual_k=1; wire=23.072205054244 mm
+logical_selection,results/physical_cost_summary.csv,True,True,normalized exact selection CSV rows,stage:gpt_pipeline,4,45,policy=fixed; actual_k=2; wire=43.747189603064 mm
+logical_design,inputs/designs/design_project_fixed_k1_random_uniform_B5mm.json,True,True,selection CSV,synthetic:random_uniform,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_random_uniform_B5mm.json,True,True,selection CSV,synthetic:random_uniform,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_random_uniform_B15mm.json,True,True,selection CSV,synthetic:random_uniform,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_random_uniform_B15mm.json,True,True,selection CSV,synthetic:random_uniform,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_random_uniform_B25mm.json,True,True,selection CSV,synthetic:random_uniform,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_random_uniform_B25mm.json,True,True,selection CSV,synthetic:random_uniform,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_random_uniform_B45mm.json,True,True,selection CSV,synthetic:random_uniform,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_random_uniform_B25mm.json,True,True,selection CSV; duplicate-topology design reuse,synthetic:random_uniform,1,45,policy=workload_aware; reused_lower_budget_design=True
+logical_design,inputs/designs/design_project_fixed_k2_random_uniform_B5mm.json,True,True,selection CSV,synthetic:random_uniform,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_random_uniform_B5mm.json,True,True,selection CSV,synthetic:random_uniform,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_random_uniform_B15mm.json,True,True,selection CSV,synthetic:random_uniform,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_random_uniform_B15mm.json,True,True,selection CSV,synthetic:random_uniform,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_random_uniform_B25mm.json,True,True,selection CSV,synthetic:random_uniform,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_random_uniform_B25mm.json,True,True,selection CSV,synthetic:random_uniform,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_random_uniform_B45mm.json,True,True,selection CSV,synthetic:random_uniform,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_random_uniform_B45mm.json,True,True,selection CSV,synthetic:random_uniform,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_random_uniform_B5mm.json,True,True,selection CSV,synthetic:random_uniform,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_random_uniform_B5mm.json,True,True,selection CSV,synthetic:random_uniform,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_random_uniform_B15mm.json,True,True,selection CSV,synthetic:random_uniform,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_random_uniform_B15mm.json,True,True,selection CSV,synthetic:random_uniform,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_random_uniform_B25mm.json,True,True,selection CSV,synthetic:random_uniform,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_random_uniform_B25mm.json,True,True,selection CSV,synthetic:random_uniform,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_random_uniform_B45mm.json,True,True,selection CSV,synthetic:random_uniform,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_random_uniform_B45mm.json,True,True,selection CSV,synthetic:random_uniform,4,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_transpose_B5mm.json,True,True,selection CSV,synthetic:transpose,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_transpose_B5mm.json,True,True,selection CSV,synthetic:transpose,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_transpose_B15mm.json,True,True,selection CSV,synthetic:transpose,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_transpose_B15mm.json,True,True,selection CSV,synthetic:transpose,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_transpose_B25mm.json,True,True,selection CSV,synthetic:transpose,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_transpose_B25mm.json,True,True,selection CSV,synthetic:transpose,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_transpose_B45mm.json,True,True,selection CSV,synthetic:transpose,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_transpose_B45mm.json,True,True,selection CSV,synthetic:transpose,1,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_transpose_B5mm.json,True,True,selection CSV,synthetic:transpose,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_transpose_B5mm.json,True,True,selection CSV,synthetic:transpose,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_transpose_B15mm.json,True,True,selection CSV,synthetic:transpose,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_transpose_B15mm.json,True,True,selection CSV,synthetic:transpose,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_transpose_B25mm.json,True,True,selection CSV,synthetic:transpose,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_transpose_B25mm.json,True,True,selection CSV,synthetic:transpose,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_transpose_B45mm.json,True,True,selection CSV,synthetic:transpose,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_transpose_B45mm.json,True,True,selection CSV,synthetic:transpose,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_transpose_B5mm.json,True,True,selection CSV,synthetic:transpose,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_transpose_B5mm.json,True,True,selection CSV,synthetic:transpose,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_transpose_B15mm.json,True,True,selection CSV,synthetic:transpose,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_transpose_B15mm.json,True,True,selection CSV,synthetic:transpose,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_transpose_B25mm.json,True,True,selection CSV,synthetic:transpose,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_transpose_B25mm.json,True,True,selection CSV,synthetic:transpose,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_transpose_B45mm.json,True,True,selection CSV,synthetic:transpose,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_transpose_B45mm.json,True,True,selection CSV,synthetic:transpose,4,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_permutation_B5mm.json,True,True,selection CSV,synthetic:permutation,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_permutation_B5mm.json,True,True,selection CSV,synthetic:permutation,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_permutation_B15mm.json,True,True,selection CSV,synthetic:permutation,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_permutation_B15mm.json,True,True,selection CSV,synthetic:permutation,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_permutation_B25mm.json,True,True,selection CSV,synthetic:permutation,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_permutation_B25mm.json,True,True,selection CSV,synthetic:permutation,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_permutation_B45mm.json,True,True,selection CSV,synthetic:permutation,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_permutation_B25mm.json,True,True,selection CSV; duplicate-topology design reuse,synthetic:permutation,1,45,policy=workload_aware; reused_lower_budget_design=True
+logical_design,inputs/designs/design_project_fixed_k2_permutation_B5mm.json,True,True,selection CSV,synthetic:permutation,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_permutation_B5mm.json,True,True,selection CSV,synthetic:permutation,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_permutation_B15mm.json,True,True,selection CSV,synthetic:permutation,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_permutation_B15mm.json,True,True,selection CSV,synthetic:permutation,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_permutation_B25mm.json,True,True,selection CSV,synthetic:permutation,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_permutation_B25mm.json,True,True,selection CSV,synthetic:permutation,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_permutation_B45mm.json,True,True,selection CSV,synthetic:permutation,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_permutation_B45mm.json,True,True,selection CSV,synthetic:permutation,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_permutation_B5mm.json,True,True,selection CSV,synthetic:permutation,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_permutation_B5mm.json,True,True,selection CSV,synthetic:permutation,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_permutation_B15mm.json,True,True,selection CSV,synthetic:permutation,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_permutation_B15mm.json,True,True,selection CSV,synthetic:permutation,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_permutation_B25mm.json,True,True,selection CSV,synthetic:permutation,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_permutation_B25mm.json,True,True,selection CSV,synthetic:permutation,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_permutation_B45mm.json,True,True,selection CSV,synthetic:permutation,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_permutation_B45mm.json,True,True,selection CSV,synthetic:permutation,4,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_hotspot_B5mm.json,True,True,selection CSV,synthetic:hotspot,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_hotspot_B5mm.json,True,True,selection CSV,synthetic:hotspot,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_hotspot_B15mm.json,True,True,selection CSV,synthetic:hotspot,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_hotspot_B15mm.json,True,True,selection CSV,synthetic:hotspot,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_hotspot_B25mm.json,True,True,selection CSV,synthetic:hotspot,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_hotspot_B25mm.json,True,True,selection CSV,synthetic:hotspot,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k1_hotspot_B45mm.json,True,True,selection CSV,synthetic:hotspot,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_k1_hotspot_B25mm.json,True,True,selection CSV; duplicate-topology design reuse,synthetic:hotspot,1,45,policy=workload_aware; reused_lower_budget_design=True
+logical_design,inputs/designs/design_project_fixed_k2_hotspot_B5mm.json,True,True,selection CSV,synthetic:hotspot,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_hotspot_B5mm.json,True,True,selection CSV,synthetic:hotspot,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_hotspot_B15mm.json,True,True,selection CSV,synthetic:hotspot,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_hotspot_B15mm.json,True,True,selection CSV,synthetic:hotspot,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_hotspot_B25mm.json,True,True,selection CSV,synthetic:hotspot,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_hotspot_B25mm.json,True,True,selection CSV,synthetic:hotspot,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k2_hotspot_B45mm.json,True,True,selection CSV,synthetic:hotspot,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k2_hotspot_B45mm.json,True,True,selection CSV,synthetic:hotspot,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_hotspot_B5mm.json,True,True,selection CSV,synthetic:hotspot,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_hotspot_B5mm.json,True,True,selection CSV,synthetic:hotspot,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_hotspot_B15mm.json,True,True,selection CSV,synthetic:hotspot,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_hotspot_B15mm.json,True,True,selection CSV,synthetic:hotspot,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_hotspot_B25mm.json,True,True,selection CSV,synthetic:hotspot,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_hotspot_B25mm.json,True,True,selection CSV,synthetic:hotspot,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_fixed_k4_hotspot_B45mm.json,True,True,selection CSV,synthetic:hotspot,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_project_aware_k4_hotspot_B45mm.json,True,True,selection CSV,synthetic:hotspot,4,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_fsdp_B5mm.json,True,True,selection CSV,stage:gpt_fsdp,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_fsdp_B5mm.json,True,True,selection CSV,stage:gpt_fsdp,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_fsdp_B15mm.json,True,True,selection CSV,stage:gpt_fsdp,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_fsdp_B15mm.json,True,True,selection CSV,stage:gpt_fsdp,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_fsdp_B25mm.json,True,True,selection CSV,stage:gpt_fsdp,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_fsdp_B25mm.json,True,True,selection CSV,stage:gpt_fsdp,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_fsdp_B45mm.json,True,True,selection CSV,stage:gpt_fsdp,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_fsdp_B45mm.json,True,True,selection CSV,stage:gpt_fsdp,1,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_fsdp_B5mm.json,True,True,selection CSV,stage:gpt_fsdp,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_fsdp_B5mm.json,True,True,selection CSV,stage:gpt_fsdp,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_fsdp_B15mm.json,True,True,selection CSV,stage:gpt_fsdp,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_fsdp_B15mm.json,True,True,selection CSV,stage:gpt_fsdp,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_fsdp_B25mm.json,True,True,selection CSV,stage:gpt_fsdp,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_fsdp_B25mm.json,True,True,selection CSV,stage:gpt_fsdp,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_fsdp_B45mm.json,True,True,selection CSV,stage:gpt_fsdp,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_fsdp_B45mm.json,True,True,selection CSV,stage:gpt_fsdp,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_fsdp_B5mm.json,True,True,selection CSV,stage:gpt_fsdp,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_fsdp_B5mm.json,True,True,selection CSV,stage:gpt_fsdp,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_fsdp_B15mm.json,True,True,selection CSV,stage:gpt_fsdp,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_fsdp_B15mm.json,True,True,selection CSV,stage:gpt_fsdp,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_fsdp_B25mm.json,True,True,selection CSV,stage:gpt_fsdp,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_fsdp_B25mm.json,True,True,selection CSV,stage:gpt_fsdp,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_fsdp_B45mm.json,True,True,selection CSV,stage:gpt_fsdp,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_fsdp_B45mm.json,True,True,selection CSV,stage:gpt_fsdp,4,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_pipeline_B5mm.json,True,True,selection CSV,stage:gpt_pipeline,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_pipeline_B5mm.json,True,True,selection CSV,stage:gpt_pipeline,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_pipeline_B15mm.json,True,True,selection CSV,stage:gpt_pipeline,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_pipeline_B15mm.json,True,True,selection CSV,stage:gpt_pipeline,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_pipeline_B25mm.json,True,True,selection CSV,stage:gpt_pipeline,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_pipeline_B25mm.json,True,True,selection CSV,stage:gpt_pipeline,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_gpt_pipeline_B45mm.json,True,True,selection CSV,stage:gpt_pipeline,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_gpt_pipeline_B45mm.json,True,True,selection CSV,stage:gpt_pipeline,1,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_pipeline_B5mm.json,True,True,selection CSV,stage:gpt_pipeline,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_pipeline_B5mm.json,True,True,selection CSV,stage:gpt_pipeline,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_pipeline_B15mm.json,True,True,selection CSV,stage:gpt_pipeline,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_pipeline_B15mm.json,True,True,selection CSV,stage:gpt_pipeline,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_pipeline_B25mm.json,True,True,selection CSV,stage:gpt_pipeline,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_pipeline_B25mm.json,True,True,selection CSV,stage:gpt_pipeline,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_gpt_pipeline_B45mm.json,True,True,selection CSV,stage:gpt_pipeline,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_gpt_pipeline_B45mm.json,True,True,selection CSV,stage:gpt_pipeline,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_pipeline_B5mm.json,True,True,selection CSV,stage:gpt_pipeline,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_pipeline_B5mm.json,True,True,selection CSV,stage:gpt_pipeline,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_pipeline_B15mm.json,True,True,selection CSV,stage:gpt_pipeline,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_pipeline_B15mm.json,True,True,selection CSV,stage:gpt_pipeline,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_pipeline_B25mm.json,True,True,selection CSV,stage:gpt_pipeline,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_pipeline_B25mm.json,True,True,selection CSV,stage:gpt_pipeline,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_gpt_pipeline_B45mm.json,True,True,selection CSV,stage:gpt_pipeline,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_gpt_pipeline_B45mm.json,True,True,selection CSV,stage:gpt_pipeline,4,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_moe_expert_B5mm.json,True,True,selection CSV,stage:moe_expert,1,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_moe_expert_B5mm.json,True,True,selection CSV,stage:moe_expert,1,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_moe_expert_B15mm.json,True,True,selection CSV,stage:moe_expert,1,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_moe_expert_B15mm.json,True,True,selection CSV,stage:moe_expert,1,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_moe_expert_B25mm.json,True,True,selection CSV,stage:moe_expert,1,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_moe_expert_B25mm.json,True,True,selection CSV,stage:moe_expert,1,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k1_moe_expert_B45mm.json,True,True,selection CSV,stage:moe_expert,1,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k1_moe_expert_B45mm.json,True,True,selection CSV,stage:moe_expert,1,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_moe_expert_B5mm.json,True,True,selection CSV,stage:moe_expert,2,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_moe_expert_B5mm.json,True,True,selection CSV,stage:moe_expert,2,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_moe_expert_B15mm.json,True,True,selection CSV,stage:moe_expert,2,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_moe_expert_B15mm.json,True,True,selection CSV,stage:moe_expert,2,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_moe_expert_B25mm.json,True,True,selection CSV,stage:moe_expert,2,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_moe_expert_B25mm.json,True,True,selection CSV,stage:moe_expert,2,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k2_moe_expert_B45mm.json,True,True,selection CSV,stage:moe_expert,2,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k2_moe_expert_B45mm.json,True,True,selection CSV,stage:moe_expert,2,45,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_moe_expert_B5mm.json,True,True,selection CSV,stage:moe_expert,4,5,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_moe_expert_B5mm.json,True,True,selection CSV,stage:moe_expert,4,5,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_moe_expert_B15mm.json,True,True,selection CSV,stage:moe_expert,4,15,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_moe_expert_B15mm.json,True,True,selection CSV,stage:moe_expert,4,15,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_moe_expert_B25mm.json,True,True,selection CSV,stage:moe_expert,4,25,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_moe_expert_B25mm.json,True,True,selection CSV,stage:moe_expert,4,25,policy=workload_aware; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_fixed_k4_moe_expert_B45mm.json,True,True,selection CSV,stage:moe_expert,4,45,policy=fixed; reused_lower_budget_design=False
+logical_design,inputs/designs/design_stage_aware_k4_moe_expert_B45mm.json,True,True,selection CSV,stage:moe_expert,4,45,policy=workload_aware; reused_lower_budget_design=False
+mesh_design,inputs/designs/design_project_k1_random_uniform_baseline.json,True,True,8-PHY physical mesh baseline,,,,
+mesh_design,inputs/designs/design_project_k1_transpose_baseline.json,True,True,8-PHY physical mesh baseline,,,,
+mesh_design,inputs/designs/design_project_k1_permutation_baseline.json,True,True,8-PHY physical mesh baseline,,,,
+mesh_design,inputs/designs/design_project_k1_hotspot_baseline.json,True,True,8-PHY physical mesh baseline,,,,
+mesh_design,inputs/designs/design_stage_mesh_gpt_fsdp.json,True,True,8-PHY physical mesh baseline,,,,
+mesh_design,inputs/designs/design_stage_mesh_gpt_pipeline.json,True,True,8-PHY physical mesh baseline,,,,
+mesh_design,inputs/designs/design_stage_mesh_moe_expert.json,True,True,8-PHY physical mesh baseline,,,,
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 2,synthetic:random_uniform,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_random_uniform_B5mm.json,True,True,synthetic policy comparison row 3,synthetic:random_uniform,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_B5mm.json,True,True,synthetic policy comparison row 4,synthetic:random_uniform,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 5,synthetic:random_uniform,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_random_uniform_B15mm.json,True,True,synthetic policy comparison row 6,synthetic:random_uniform,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_B15mm.json,True,True,synthetic policy comparison row 7,synthetic:random_uniform,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 8,synthetic:random_uniform,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_random_uniform_B25mm.json,True,True,synthetic policy comparison row 9,synthetic:random_uniform,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_B25mm.json,True,True,synthetic policy comparison row 10,synthetic:random_uniform,1,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 11,synthetic:random_uniform,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_random_uniform_B25mm.json,True,True,synthetic policy comparison row 12,synthetic:random_uniform,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_random_uniform_B25mm.json,True,True,synthetic policy comparison row 13,synthetic:random_uniform,1,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 14,synthetic:transpose,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_transpose_B5mm.json,True,True,synthetic policy comparison row 15,synthetic:transpose,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_B5mm.json,True,True,synthetic policy comparison row 16,synthetic:transpose,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 17,synthetic:transpose,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_transpose_B15mm.json,True,True,synthetic policy comparison row 18,synthetic:transpose,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_B15mm.json,True,True,synthetic policy comparison row 19,synthetic:transpose,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 20,synthetic:transpose,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_transpose_B25mm.json,True,True,synthetic policy comparison row 21,synthetic:transpose,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_B25mm.json,True,True,synthetic policy comparison row 22,synthetic:transpose,1,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 23,synthetic:transpose,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_transpose_B25mm.json,True,True,synthetic policy comparison row 24,synthetic:transpose,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_transpose_B45mm.json,True,True,synthetic policy comparison row 25,synthetic:transpose,1,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 26,synthetic:permutation,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_permutation_B5mm.json,True,True,synthetic policy comparison row 27,synthetic:permutation,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_B5mm.json,True,True,synthetic policy comparison row 28,synthetic:permutation,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 29,synthetic:permutation,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_permutation_B15mm.json,True,True,synthetic policy comparison row 30,synthetic:permutation,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_B15mm.json,True,True,synthetic policy comparison row 31,synthetic:permutation,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 32,synthetic:permutation,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_permutation_B25mm.json,True,True,synthetic policy comparison row 33,synthetic:permutation,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_B25mm.json,True,True,synthetic policy comparison row 34,synthetic:permutation,1,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 35,synthetic:permutation,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_permutation_B25mm.json,True,True,synthetic policy comparison row 36,synthetic:permutation,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_permutation_B25mm.json,True,True,synthetic policy comparison row 37,synthetic:permutation,1,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 38,synthetic:hotspot,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_hotspot_B5mm.json,True,True,synthetic policy comparison row 39,synthetic:hotspot,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_B5mm.json,True,True,synthetic policy comparison row 40,synthetic:hotspot,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 41,synthetic:hotspot,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_hotspot_B15mm.json,True,True,synthetic policy comparison row 42,synthetic:hotspot,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_B15mm.json,True,True,synthetic policy comparison row 43,synthetic:hotspot,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 44,synthetic:hotspot,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_hotspot_B25mm.json,True,True,synthetic policy comparison row 45,synthetic:hotspot,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_B25mm.json,True,True,synthetic policy comparison row 46,synthetic:hotspot,1,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 47,synthetic:hotspot,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k1_hotspot_B25mm.json,True,True,synthetic policy comparison row 48,synthetic:hotspot,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_hotspot_B25mm.json,True,True,synthetic policy comparison row 49,synthetic:hotspot,1,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 50,synthetic:random_uniform,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_random_uniform_B5mm.json,True,True,synthetic policy comparison row 51,synthetic:random_uniform,2,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_random_uniform_B5mm.json,True,True,synthetic policy comparison row 52,synthetic:random_uniform,2,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 53,synthetic:random_uniform,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_random_uniform_B15mm.json,True,True,synthetic policy comparison row 54,synthetic:random_uniform,2,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_random_uniform_B15mm.json,True,True,synthetic policy comparison row 55,synthetic:random_uniform,2,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 56,synthetic:random_uniform,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_random_uniform_B25mm.json,True,True,synthetic policy comparison row 57,synthetic:random_uniform,2,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_random_uniform_B25mm.json,True,True,synthetic policy comparison row 58,synthetic:random_uniform,2,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 59,synthetic:random_uniform,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_random_uniform_B45mm.json,True,True,synthetic policy comparison row 60,synthetic:random_uniform,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_random_uniform_B45mm.json,True,True,synthetic policy comparison row 61,synthetic:random_uniform,2,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 62,synthetic:transpose,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_transpose_B5mm.json,True,True,synthetic policy comparison row 63,synthetic:transpose,2,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_transpose_B5mm.json,True,True,synthetic policy comparison row 64,synthetic:transpose,2,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 65,synthetic:transpose,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_transpose_B15mm.json,True,True,synthetic policy comparison row 66,synthetic:transpose,2,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_transpose_B15mm.json,True,True,synthetic policy comparison row 67,synthetic:transpose,2,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 68,synthetic:transpose,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_transpose_B25mm.json,True,True,synthetic policy comparison row 69,synthetic:transpose,2,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_transpose_B25mm.json,True,True,synthetic policy comparison row 70,synthetic:transpose,2,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 71,synthetic:transpose,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_transpose_B45mm.json,True,True,synthetic policy comparison row 72,synthetic:transpose,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_transpose_B45mm.json,True,True,synthetic policy comparison row 73,synthetic:transpose,2,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 74,synthetic:permutation,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_permutation_B5mm.json,True,True,synthetic policy comparison row 75,synthetic:permutation,2,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_permutation_B5mm.json,True,True,synthetic policy comparison row 76,synthetic:permutation,2,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 77,synthetic:permutation,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_permutation_B15mm.json,True,True,synthetic policy comparison row 78,synthetic:permutation,2,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_permutation_B15mm.json,True,True,synthetic policy comparison row 79,synthetic:permutation,2,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 80,synthetic:permutation,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_permutation_B25mm.json,True,True,synthetic policy comparison row 81,synthetic:permutation,2,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_permutation_B25mm.json,True,True,synthetic policy comparison row 82,synthetic:permutation,2,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 83,synthetic:permutation,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_permutation_B45mm.json,True,True,synthetic policy comparison row 84,synthetic:permutation,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_permutation_B45mm.json,True,True,synthetic policy comparison row 85,synthetic:permutation,2,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 86,synthetic:hotspot,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_hotspot_B5mm.json,True,True,synthetic policy comparison row 87,synthetic:hotspot,2,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_hotspot_B5mm.json,True,True,synthetic policy comparison row 88,synthetic:hotspot,2,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 89,synthetic:hotspot,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_hotspot_B15mm.json,True,True,synthetic policy comparison row 90,synthetic:hotspot,2,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_hotspot_B15mm.json,True,True,synthetic policy comparison row 91,synthetic:hotspot,2,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 92,synthetic:hotspot,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_hotspot_B25mm.json,True,True,synthetic policy comparison row 93,synthetic:hotspot,2,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_hotspot_B25mm.json,True,True,synthetic policy comparison row 94,synthetic:hotspot,2,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 95,synthetic:hotspot,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k2_hotspot_B45mm.json,True,True,synthetic policy comparison row 96,synthetic:hotspot,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k2_hotspot_B45mm.json,True,True,synthetic policy comparison row 97,synthetic:hotspot,2,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 98,synthetic:random_uniform,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_random_uniform_B5mm.json,True,True,synthetic policy comparison row 99,synthetic:random_uniform,4,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_random_uniform_B5mm.json,True,True,synthetic policy comparison row 100,synthetic:random_uniform,4,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 101,synthetic:random_uniform,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_random_uniform_B15mm.json,True,True,synthetic policy comparison row 102,synthetic:random_uniform,4,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_random_uniform_B15mm.json,True,True,synthetic policy comparison row 103,synthetic:random_uniform,4,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 104,synthetic:random_uniform,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_random_uniform_B25mm.json,True,True,synthetic policy comparison row 105,synthetic:random_uniform,4,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_random_uniform_B25mm.json,True,True,synthetic policy comparison row 106,synthetic:random_uniform,4,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_random_uniform_baseline.json,True,True,synthetic policy comparison row 107,synthetic:random_uniform,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_random_uniform_B45mm.json,True,True,synthetic policy comparison row 108,synthetic:random_uniform,4,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_random_uniform_B45mm.json,True,True,synthetic policy comparison row 109,synthetic:random_uniform,4,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 110,synthetic:transpose,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_transpose_B5mm.json,True,True,synthetic policy comparison row 111,synthetic:transpose,4,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_transpose_B5mm.json,True,True,synthetic policy comparison row 112,synthetic:transpose,4,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 113,synthetic:transpose,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_transpose_B15mm.json,True,True,synthetic policy comparison row 114,synthetic:transpose,4,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_transpose_B15mm.json,True,True,synthetic policy comparison row 115,synthetic:transpose,4,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 116,synthetic:transpose,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_transpose_B25mm.json,True,True,synthetic policy comparison row 117,synthetic:transpose,4,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_transpose_B25mm.json,True,True,synthetic policy comparison row 118,synthetic:transpose,4,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_transpose_baseline.json,True,True,synthetic policy comparison row 119,synthetic:transpose,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_transpose_B45mm.json,True,True,synthetic policy comparison row 120,synthetic:transpose,4,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_transpose_B45mm.json,True,True,synthetic policy comparison row 121,synthetic:transpose,4,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 122,synthetic:permutation,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_permutation_B5mm.json,True,True,synthetic policy comparison row 123,synthetic:permutation,4,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_permutation_B5mm.json,True,True,synthetic policy comparison row 124,synthetic:permutation,4,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 125,synthetic:permutation,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_permutation_B15mm.json,True,True,synthetic policy comparison row 126,synthetic:permutation,4,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_permutation_B15mm.json,True,True,synthetic policy comparison row 127,synthetic:permutation,4,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 128,synthetic:permutation,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_permutation_B25mm.json,True,True,synthetic policy comparison row 129,synthetic:permutation,4,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_permutation_B25mm.json,True,True,synthetic policy comparison row 130,synthetic:permutation,4,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_permutation_baseline.json,True,True,synthetic policy comparison row 131,synthetic:permutation,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_permutation_B45mm.json,True,True,synthetic policy comparison row 132,synthetic:permutation,4,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_permutation_B45mm.json,True,True,synthetic policy comparison row 133,synthetic:permutation,4,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 134,synthetic:hotspot,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_hotspot_B5mm.json,True,True,synthetic policy comparison row 135,synthetic:hotspot,4,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_hotspot_B5mm.json,True,True,synthetic policy comparison row 136,synthetic:hotspot,4,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 137,synthetic:hotspot,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_hotspot_B15mm.json,True,True,synthetic policy comparison row 138,synthetic:hotspot,4,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_hotspot_B15mm.json,True,True,synthetic policy comparison row 139,synthetic:hotspot,4,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 140,synthetic:hotspot,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_hotspot_B25mm.json,True,True,synthetic policy comparison row 141,synthetic:hotspot,4,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_hotspot_B25mm.json,True,True,synthetic policy comparison row 142,synthetic:hotspot,4,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/k1_hotspot_baseline.json,True,True,synthetic policy comparison row 143,synthetic:hotspot,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/fixed_k4_hotspot_B45mm.json,True,True,synthetic policy comparison row 144,synthetic:hotspot,4,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/aware_k4_hotspot_B45mm.json,True,True,synthetic policy comparison row 145,synthetic:hotspot,4,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 2,stage:gpt_fsdp,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B5mm.json,True,True,stage policy comparison row 3,stage:gpt_fsdp,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_fsdp_B5mm.json,True,True,stage policy comparison row 4,stage:gpt_fsdp,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 5,stage:gpt_fsdp,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B5mm.json,True,True,stage policy comparison row 6,stage:gpt_fsdp,2,5,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B5mm.json,True,True,stage policy comparison row 7,stage:gpt_fsdp,2,5,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 8,stage:gpt_fsdp,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B5mm.json,True,True,stage policy comparison row 9,stage:gpt_fsdp,4,5,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B5mm.json,True,True,stage policy comparison row 10,stage:gpt_fsdp,4,5,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 11,stage:gpt_fsdp,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B15mm.json,True,True,stage policy comparison row 12,stage:gpt_fsdp,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_fsdp_B15mm.json,True,True,stage policy comparison row 13,stage:gpt_fsdp,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 14,stage:gpt_fsdp,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B15mm.json,True,True,stage policy comparison row 15,stage:gpt_fsdp,2,15,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B15mm.json,True,True,stage policy comparison row 16,stage:gpt_fsdp,2,15,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 17,stage:gpt_fsdp,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B15mm.json,True,True,stage policy comparison row 18,stage:gpt_fsdp,4,15,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B15mm.json,True,True,stage policy comparison row 19,stage:gpt_fsdp,4,15,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 20,stage:gpt_fsdp,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 21,stage:gpt_fsdp,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 22,stage:gpt_fsdp,1,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 23,stage:gpt_fsdp,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 24,stage:gpt_fsdp,2,25,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 25,stage:gpt_fsdp,2,25,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 26,stage:gpt_fsdp,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 27,stage:gpt_fsdp,4,25,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 28,stage:gpt_fsdp,4,25,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 29,stage:gpt_fsdp,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_fsdp_B25mm.json,True,True,stage policy comparison row 30,stage:gpt_fsdp,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B45mm.json,True,True,stage policy comparison row 31,stage:gpt_fsdp,1,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 32,stage:gpt_fsdp,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k2_gpt_fsdp_B45mm.json,True,True,stage policy comparison row 33,stage:gpt_fsdp,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_fsdp_B45mm.json,True,True,stage policy comparison row 34,stage:gpt_fsdp,2,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_fsdp.json,True,True,stage policy comparison row 35,stage:gpt_fsdp,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k2_gpt_fsdp_B45mm.json,True,True,stage policy comparison row 36,stage:gpt_fsdp,4,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_fsdp_B45mm.json,True,True,stage policy comparison row 37,stage:gpt_fsdp,4,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 38,stage:gpt_pipeline,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B5mm.json,True,True,stage policy comparison row 39,stage:gpt_pipeline,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_pipeline_B5mm.json,True,True,stage policy comparison row 40,stage:gpt_pipeline,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 41,stage:gpt_pipeline,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B5mm.json,True,True,stage policy comparison row 42,stage:gpt_pipeline,2,5,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_pipeline_B5mm.json,True,True,stage policy comparison row 43,stage:gpt_pipeline,2,5,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 44,stage:gpt_pipeline,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B5mm.json,True,True,stage policy comparison row 45,stage:gpt_pipeline,4,5,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_pipeline_B5mm.json,True,True,stage policy comparison row 46,stage:gpt_pipeline,4,5,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 47,stage:gpt_pipeline,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 48,stage:gpt_pipeline,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 49,stage:gpt_pipeline,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 50,stage:gpt_pipeline,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 51,stage:gpt_pipeline,2,15,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 52,stage:gpt_pipeline,2,15,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 53,stage:gpt_pipeline,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 54,stage:gpt_pipeline,4,15,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 55,stage:gpt_pipeline,4,15,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 56,stage:gpt_pipeline,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 57,stage:gpt_pipeline,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 58,stage:gpt_pipeline,1,25,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 59,stage:gpt_pipeline,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 60,stage:gpt_pipeline,2,25,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k2_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 61,stage:gpt_pipeline,2,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 62,stage:gpt_pipeline,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 63,stage:gpt_pipeline,4,25,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k2_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 64,stage:gpt_pipeline,4,25,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 65,stage:gpt_pipeline,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 66,stage:gpt_pipeline,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_gpt_pipeline_B15mm.json,True,True,stage policy comparison row 67,stage:gpt_pipeline,1,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 68,stage:gpt_pipeline,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k2_gpt_pipeline_B45mm.json,True,True,stage policy comparison row 69,stage:gpt_pipeline,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k2_gpt_pipeline_B25mm.json,True,True,stage policy comparison row 70,stage:gpt_pipeline,2,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_gpt_pipeline.json,True,True,stage policy comparison row 71,stage:gpt_pipeline,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k2_gpt_pipeline_B45mm.json,True,True,stage policy comparison row 72,stage:gpt_pipeline,4,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k4_gpt_pipeline_B45mm.json,True,True,stage policy comparison row 73,stage:gpt_pipeline,4,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 74,stage:moe_expert,1,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B5mm.json,True,True,stage policy comparison row 75,stage:moe_expert,1,5,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_moe_expert_B5mm.json,True,True,stage policy comparison row 76,stage:moe_expert,1,5,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 77,stage:moe_expert,2,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B5mm.json,True,True,stage policy comparison row 78,stage:moe_expert,2,5,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_moe_expert_B5mm.json,True,True,stage policy comparison row 79,stage:moe_expert,2,5,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 80,stage:moe_expert,4,5,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B5mm.json,True,True,stage policy comparison row 81,stage:moe_expert,4,5,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_moe_expert_B5mm.json,True,True,stage policy comparison row 82,stage:moe_expert,4,5,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 83,stage:moe_expert,1,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 84,stage:moe_expert,1,15,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 85,stage:moe_expert,1,15,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 86,stage:moe_expert,2,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 87,stage:moe_expert,2,15,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 88,stage:moe_expert,2,15,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 89,stage:moe_expert,4,15,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 90,stage:moe_expert,4,15,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 91,stage:moe_expert,4,15,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 92,stage:moe_expert,1,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B25mm.json,True,True,stage policy comparison row 93,stage:moe_expert,1,25,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 94,stage:moe_expert,1,25,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 95,stage:moe_expert,2,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B25mm.json,True,True,stage policy comparison row 96,stage:moe_expert,2,25,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k2_moe_expert_B25mm.json,True,True,stage policy comparison row 97,stage:moe_expert,2,25,policy=workload_aware; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 98,stage:moe_expert,4,25,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B25mm.json,True,True,stage policy comparison row 99,stage:moe_expert,4,25,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k2_moe_expert_B25mm.json,True,True,stage policy comparison row 100,stage:moe_expert,4,25,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 101,stage:moe_expert,1,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k1_moe_expert_B25mm.json,True,True,stage policy comparison row 102,stage:moe_expert,1,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k1_moe_expert_B15mm.json,True,True,stage policy comparison row 103,stage:moe_expert,1,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 104,stage:moe_expert,2,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k2_moe_expert_B45mm.json,True,True,stage policy comparison row 105,stage:moe_expert,2,45,policy=fixed; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_aware_k2_moe_expert_B25mm.json,True,True,stage policy comparison row 106,stage:moe_expert,2,45,policy=workload_aware; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_mesh_moe_expert.json,True,True,stage policy comparison row 107,stage:moe_expert,4,45,policy=mesh; documented_duplicate_topology_reuse=False
+booksim_result,results/stage_fixed_k2_moe_expert_B45mm.json,True,True,stage policy comparison row 108,stage:moe_expert,4,45,policy=fixed; documented_duplicate_topology_reuse=True
+booksim_result,results/stage_aware_k4_moe_expert_B45mm.json,True,True,stage policy comparison row 109,stage:moe_expert,4,45,policy=workload_aware; documented_duplicate_topology_reuse=False
+synthetic_traffic,inputs/traffic_by_chiplet/traffic_project_random_uniform.json,True,True,project/generate_fixed_workloads.py,random_uniform,,,
+synthetic_traffic,inputs/traffic_by_unit/traffic_project_random_uniform.json,True,True,project/generate_fixed_workloads.py,random_uniform,,,
+synthetic_traffic,inputs/traffic_by_chiplet/traffic_project_transpose.json,True,True,project/generate_fixed_workloads.py,transpose,,,
+synthetic_traffic,inputs/traffic_by_unit/traffic_project_transpose.json,True,True,project/generate_fixed_workloads.py,transpose,,,
+synthetic_traffic,inputs/traffic_by_chiplet/traffic_project_permutation.json,True,True,project/generate_fixed_workloads.py,permutation,,,
+synthetic_traffic,inputs/traffic_by_unit/traffic_project_permutation.json,True,True,project/generate_fixed_workloads.py,permutation,,,
+synthetic_traffic,inputs/traffic_by_chiplet/traffic_project_hotspot.json,True,True,project/generate_fixed_workloads.py,hotspot,,,
+synthetic_traffic,inputs/traffic_by_unit/traffic_project_hotspot.json,True,True,project/generate_fixed_workloads.py,hotspot,,,
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_permutation_seed42.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=42
+seeded_traffic,inputs/traffic_by_unit/traffic_project_permutation_seed42.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=42
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_permutation_seed43.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=43
+seeded_traffic,inputs/traffic_by_unit/traffic_project_permutation_seed43.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=43
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_permutation_seed44.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=44
+seeded_traffic,inputs/traffic_by_unit/traffic_project_permutation_seed44.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=44
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_permutation_seed45.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=45
+seeded_traffic,inputs/traffic_by_unit/traffic_project_permutation_seed45.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=45
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_permutation_seed46.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=46
+seeded_traffic,inputs/traffic_by_unit/traffic_project_permutation_seed46.json,True,True,project/generate_multiseed_workloads.py,permutation,,,random_seed=46
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_hotspot_seed42.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=42
+seeded_traffic,inputs/traffic_by_unit/traffic_project_hotspot_seed42.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=42
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_hotspot_seed43.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=43
+seeded_traffic,inputs/traffic_by_unit/traffic_project_hotspot_seed43.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=43
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_hotspot_seed44.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=44
+seeded_traffic,inputs/traffic_by_unit/traffic_project_hotspot_seed44.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=44
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_hotspot_seed45.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=45
+seeded_traffic,inputs/traffic_by_unit/traffic_project_hotspot_seed45.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=45
+seeded_traffic,inputs/traffic_by_chiplet/traffic_project_hotspot_seed46.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=46
+seeded_traffic,inputs/traffic_by_unit/traffic_project_hotspot_seed46.json,True,True,project/generate_multiseed_workloads.py,hotspot,,,random_seed=46
+stage_conversion_output,inputs/traffic_by_chiplet/traffic_stage_gpt_pipeline.json,True,True,project/convert_stage_to_traffic.py,gpt_pipeline,,,
+stage_conversion_output,inputs/traffic_by_unit/traffic_stage_gpt_pipeline.json,True,True,project/convert_stage_to_traffic.py,gpt_pipeline,,,
+stage_conversion_output,results/stage_mapping_gpt_pipeline.csv,True,True,project/convert_stage_to_traffic.py,gpt_pipeline,,,
+stage_trace,stage/generated/rapidchiplet_representative/gpt_pipeline,True,True,python main.py --output_dir generated/rapidchiplet_representative/gpt_pipeline --output_name trace.%d.et --model_type gpt --dp 2 --tp 2 --pp 4 --sp 1 --ep 1 --weight_sharded false --dmodel 128 --dff 256 --batch 8 --micro_batch 4 --seq 32 --head 8 --kvhead 4 --num_stacks 4,gpt_pipeline,,,
+stage_conversion_output,inputs/traffic_by_chiplet/traffic_stage_gpt_fsdp.json,True,True,project/convert_stage_to_traffic.py,gpt_fsdp,,,
+stage_conversion_output,inputs/traffic_by_unit/traffic_stage_gpt_fsdp.json,True,True,project/convert_stage_to_traffic.py,gpt_fsdp,,,
+stage_conversion_output,results/stage_mapping_gpt_fsdp.csv,True,True,project/convert_stage_to_traffic.py,gpt_fsdp,,,
+stage_trace,stage/generated/rapidchiplet_representative/gpt_fsdp,True,True,python main.py --output_dir generated/rapidchiplet_representative/gpt_fsdp --output_name trace.%d.et --model_type gpt --dp 16 --tp 1 --pp 1 --sp 1 --ep 1 --weight_sharded true --dmodel 128 --dff 256 --batch 16 --micro_batch 8 --seq 32 --head 8 --kvhead 4 --num_stacks 2,gpt_fsdp,,,
+stage_conversion_output,inputs/traffic_by_chiplet/traffic_stage_moe_expert.json,True,True,project/convert_stage_to_traffic.py,moe_expert,,,
+stage_conversion_output,inputs/traffic_by_unit/traffic_stage_moe_expert.json,True,True,project/convert_stage_to_traffic.py,moe_expert,,,
+stage_conversion_output,results/stage_mapping_moe_expert.csv,True,True,project/convert_stage_to_traffic.py,moe_expert,,,
+stage_trace,stage/generated/rapidchiplet_representative/moe_expert,True,True,python main.py --output_dir generated/rapidchiplet_representative/moe_expert --output_name trace.%d.et --model_type moe --dp 2 --tp 2 --pp 1 --sp 1 --ep 4 --weight_sharded false --dmodel 128 --dff 256 --batch 8 --micro_batch 4 --seq 32 --head 8 --kvhead 4 --num_stacks 2 --experts 8 --kexperts 2,moe_expert,,,
+audit_output,results/reproducibility_audit.txt,True,True,project/audit_project_results.py,,,,generated after all checks
+audit_output,results/reproducibility_manifest.csv,True,True,project/audit_project_results.py,,,,self-describing manifest
