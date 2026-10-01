@@ -1,6 +1,7 @@
 # Import python libraries
 import math
 import copy
+import os
 import subprocess
 
 # Import RapidChiplet files
@@ -354,7 +355,7 @@ def run_booksim_simulation(inputs, intermediates, run_identifier):
 	precision = booksim_config["precision"]
 	saturation_factor = booksim_config["saturation_factor"]
 	# Paths
-	exec_path = "booksim2/src/booksim"
+	exec_path = "booksim2/src/booksim.exe" if os.name == "nt" else "booksim2/src/booksim"
 	config_path = "booksim2/src/rc_configs/%s.conf" % run_identifier
 	# Prepare the results
 	results = {}

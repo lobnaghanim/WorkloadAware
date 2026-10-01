@@ -1,0 +1,13 @@
+# Environments and caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# BookSim build products (regenerate with `make -C booksim2/src`)
+booksim2/src/*.o
+booksim2/src/*.d
+booksim2/src/*/*.o
+booksim2/src/*/*.d
+booksim2/src/booksim
+booksim2/src/booksim.exe

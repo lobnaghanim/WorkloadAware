@@ -1,183 +1,126 @@
-# RapidChiplet
+# Workload-Aware Long-Range Links for Chiplet Networks
 
-<p align="center">
-  <img src="misc/main_overview.svg">
-</p>
+This repository extends RapidChiplet with a physically constrained study of workload-aware long-range links in a 16-chiplet, 4×4 mesh. The project asks whether traffic-specific shortcuts provide a better communication-performance tradeoff than the same mesh or workload-independent Fixed shortcuts under equal hardware capability.
 
-## Setup Guide
+The final stored-artifact audit status is **PASS**: 732/732 artifact records valid, zero warnings, and zero failures. See [the audit](results/reproducibility_audit.txt).
 
-Clone the RapidChiplet repository:
-```bash
-git clone https://github.com/spcl/rapidchiplet.git
-```
+## Project objective and contribution
 
-Install all requirements using pip:
-```bash
-cd rc 
-pip install -r requirements.txt
-```
+The main contribution is an evaluated link-selection workflow that minimizes workload-average analytical latency while enforcing:
 
-Build the BookSim2 [1,2] simulator:
-```bash
-cd booksim2/src
-make
-cd ../../
-```
+- a maximum requested link count K;
+- a total physical wire budget;
+- no increase above the original workload's maximum directed-link load;
+- valid and available PHY endpoints;
+- no PHY reuse, duplicate shortcut, or existing mesh edge; and
+- regenerated SPLIF routing after topology changes.
 
-Build Netrace [3,4]
-```bash
-cd netrace
-gcc export_trace.c netrace.c -o export_trace
-cd ../
-```
+K=1 evaluates all 96 non-mesh chiplet pairs under the project candidate model. K=2 and K=4 greedily extend the current topology and reevaluate feasibility after each selected link. Exact selections are then materialized as RapidChiplet designs and validated with BookSim.
 
-## Reproducing Results from the RapidChiplet Paper
+## Architecture and terminology
 
-```bash
-python3 reproduce_paper_results.py
-```
-- Note that this script runs for almost one day.
-- The results might slightly differ from the paper due to different system specifications.
-- The plots that appear in the paper in Figure 4 (right), Figure 5, and Figure 6 will be stored in the `./plots/` directory.
-- The chip visualization that appears in the paper in Figure 4 (left) will be stored in the `./images/` directory.
+- **4-PHY reference:** the original mesh architecture, used only to quantify the area and power overhead of providing shortcut capability.
+- **8-PHY Mesh:** the no-shortcut, 24-link performance baseline used for every Mesh-vs-Fixed-vs-Workload-Aware comparison.
+- **`requested_k`:** the maximum number of shortcuts the optimizer is allowed to select: 1, 2, or 4.
+- **`actual_k`:** the number it could actually install after wire, PHY, topology, and load constraints. It may be smaller than `requested_k`.
+- **Derived latency knee:** the first tested offered load at which average packet latency is at least twice low-load packet latency. It is not an exact throughput boundary.
 
-## RapidChiplet Core
+The physical wire budgets are **5, 15, 25, and 45 mm**.
 
-### Inputs
+## Workloads
 
-<p align="center">
-  <img src="misc/input_overview.svg" style="width: 100%; height: auto;">
-</p>
+Synthetic workloads are `random_uniform`, `transpose`, `permutation`, and `hotspot`. Fixed links are chosen once using the uniform reference; Workload-Aware links are chosen separately for the traffic under test.
 
+The STAGE-derived workloads are discovered from the validated traces/results: `gpt_pipeline`, `gpt_fsdp`, and `moe_expert`. Each contains 16 ranks mapped one-to-one to the 16 chiplets. Abstract collectives are expanded using the validated ring policy and normalized to the canonical project traffic scale.
 
-Configure your chip design using the different input files. Check out the example files in `./inputs/` to get started.
+## Repository structure
 
-We provide the following input generation scripts for more complex input-files that cannot easily be written by hand:
+| Path | Purpose |
+| --- | --- |
+| `rapidchiplet.py`, `helpers.py`, `booksim_wrapper.py` | RapidChiplet analysis and BookSim integration |
+| `booksim2/` | BookSim source and local build products |
+| `project/` | Project generation, optimization, simulation, comparison, analysis, and audit scripts |
+| `inputs/` | Chiplets, placement, packaging, traffic, topology, routing, and generated designs |
+| `stage/` | STAGE source plus representative generated traces |
+| `results/` | Stored selections, simulations, comparisons, final analysis, figures, and tables |
+| `docs/` | Final report, executive summary, reproducibility and packaging guides |
+| `experiments/` | RapidChiplet experiment definitions, including the base project mesh |
 
-**generate_routing.py**: Generates a routing table for a given chip design
+## Requirements
+
+- Python 3 with the packages pinned in [requirements.txt](requirements.txt): Matplotlib 3.8.4, NetworkX 3.3, and NumPy 2.1.1.
+- A C++ toolchain and GNU Make (or an equivalent Windows build) for BookSim.
+- For regenerating STAGE traces rather than using the stored traces, the packages in [stage/requirements.txt](stage/requirements.txt).
+
+Create an isolated environment and install the core requirements:
 
 ```bash
-python3 generate_routing.py -df inputs/designs/<design_file> -rtf <routing_table_file> -ra <routing_algorithm>
+python3 -m venv .venv
+python3 -m pip install -r requirements.txt
 ```
-- The `<design file>` points to all inputs that the routing table generator needs (chiplets, placement, topology).
-- The `<routing_table_file>` is the name under which the resulting routing table is stored (in `inputs/routing_tables/`).
-- `<routing algorithm>` specifies the routing algorithm to be used. We currently support two routing algorithms:
-  - `splif`: Shortest Path Lowest ID first
-  - `sptmr`: Shortest Path Turn Model Random
 
-**generate_traffic.py**: Generate a synthetic traffic pattern for a given chip design
+Do not commit `.venv/` or Python cache directories.
+
+## RapidChiplet and BookSim setup
+
+From the repository root, build BookSim:
 
 ```bash
-python3 generate_traffic.py -df inputs/designs/<design_file> -tf <traffic_file> -tp <traffic_pattern> -par <parameters>
+make -C booksim2/src
 ```
-- The `<design file>` points to all inputs that the traffic generator needs (chiplets, placement).
-- The `<traffic_file>` is the name under which the resulting traffic pattern is stored (in `/inputs/traffic_by_chiplet/` and `inputs/traffic_by_unit/`).
-- `<traffic_pattern>` specifies the traffic pattern to be generated. We currently support four traffic patterns: `random_uniform`, `transpose`, `permutation`, `hotspot`.
-- `<parameters>` are specific to the selected traffic pattern.
 
-### Executing RapidChiplet
+RapidChiplet expects `booksim2/src/booksim` on Unix-like systems or `booksim2/src/booksim.exe` on Windows. A single design can be evaluated with:
 
 ```bash
-python3 rapidchiplet.py -df inputs/designs/<design_file> -rf <results_file> [-as] [-ps] [-ls] [-c] [-l] [-t]
+python3 rapidchiplet.py -df inputs/designs/<design>.json -rf results/<result>.json -l -t -bs
 ```
-- The `<design_file>` points to all inputs that are required
-- The `<results_file>` specifies the name, under which the results are stored (in `/results/`).
-- The optional flags are used to enable the computation of different metrics: area summary (`-as`), power summary (`-ps`), link summary (`-ls`), manufacturing cost (`-c`), latency (`-l`), throughput (`-t`).
 
-## Cycle-based Simulations using BookSim
+The project runners invoke this form with `subprocess.run(..., check=True)`, validate result completeness, skip completed outputs, and document duplicate-topology reuse where applicable.
 
-To export a design to BookSim and gather the results, simply run `rapidchiplet.py` with the `-bs` flag:
+## Workload-aware and Fixed policies
+
+```text
+Fixed:
+uniform reference traffic → choose topology once → freeze across workloads
+
+Workload-Aware:
+current workload traffic → choose topology for that workload
+```
+
+Both policies use the same requested K, wire budgets, spare-PHY architecture, physical-distance model, SPLIF routing, and original-baseline maximum-load constraint. The intentional difference is the traffic used for topology selection.
+
+## Main results
+
+The most useful entry points are:
+
+- [final_result_summary.csv](results/final_result_summary.csv): final aggregate metrics.
+- [final_key_findings.txt](results/final_key_findings.txt): evidence-based narrative findings.
+- [all_k_summary.csv](results/all_k_summary.csv): combined synthetic K=1/K=2/K=4 comparison.
+- [stage_policy_summary.csv](results/stage_policy_summary.csv): STAGE Mesh/Fixed/Workload-Aware results.
+- [multiseed_summary.csv](results/multiseed_summary.csv): robustness across seeds 42–46.
+- [physical_cost_summary.csv](results/physical_cost_summary.csv): per-configuration wire, PHY, and efficiency metrics.
+- [physical_cost_overhead.csv](results/physical_cost_overhead.csv): 4-PHY→8-PHY area/power capability cost.
+- [reproducibility_manifest.csv](results/reproducibility_manifest.csv): artifact-level traceability.
+
+See [RESULTS_GUIDE.md](docs/RESULTS_GUIDE.md) for field-level interpretation.
+
+## Final figures, tables, and report
+
+- Publication figures: [`results/figures/`](results/figures/)
+- Condensed tables: [`results/tables/`](results/tables/)
+- Complete report: [docs/final_project_report.md](docs/final_project_report.md)
+- Executive summary: [docs/final_project_summary.md](docs/final_project_summary.md)
+- Current pipeline status: [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md)
+
+## Reproduction
+
+The ordered workflow, commands, prerequisites, and expected outputs are documented in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). The pipeline is intentionally not wrapped in one automatic command because RapidChiplet/BookSim runs are expensive and each stage validates its existing outputs before proceeding.
+
+For an inexpensive consistency check of already generated artifacts:
 
 ```bash
-python3 rapidchiplet.py -df inputs/designs/<design_file> -rf <results_file> -bs
-```
-- The `<design_file>` points to all inputs that are required.
-- The `<results_file>` specifies the name, under which the results are stored (in `/results/`).
-
-## Automated Design Space Exploration
-
-### Inputs
-
-Specify parameters and parameter-ranges for your design space exploration in an experiment-file in the `./experiments/` directory. Check out the provided example files to get started.
-
-
-### Running the Automated DSE
-
-```bash
-python3 run_experiment.py -e experiments/<experiment_file>
+python3 -m py_compile project/audit_project_results.py
+python3 project/audit_project_results.py
 ```
 
-This script generates one results-file for each combination of input parameters. All result-files are stored in `./results/`.
-
-## Exporting Network Traces using Netrace
-
-### Inputs
-
-Download the traces from the netrace website [5] and store them in `./netrace/traces_in/`.
-
-### Export traces
-
-In a first step, export the traces from the netrace format into an intermediate format:
-
-```bash
-cd netrace
-./export_trace traces_in/<trace_name>.tra.bz2 <trace_region_id> <packet_limit> > traces_out/<trace_name>.json
-cd ../
-```
-
-- Netrace traces contain one or multiple trace regions. Use the `<trace_region_id>` argument to specify the region to export. If you want to export the whole trace, omit this argument.
-- Some Netrace traces are very long. If you only want to export a partial trace region, use the `<packet_limit>` argument to pass the maximum number of packets that should be exported.
-
-In a second step, the trace is parsed into the RapidChiplet format:
-
-```bash
-python3 parse_netrace_trace.py -df inputs/designs/<design_file> -if netrace/traces_out/<trace_name>.json -of <trace_name>.json
-```
-
-- The `<design file>` points to all inputs that the trace parser needs.
-- The arguments `-if` and `-of` refer to the input-trace-file (in the intermediate format) and the output-trace-file (in the output format). The output trace file is stored in `inputs/traces/`.
-
-
-## Visualization of Inputs and Results
-
-### Visualizing Inputs
-
-Visualize a complete design by running
-
-```bash
-python3 visualizer.py -df inputs/designs/<design_name> [-sci] [-spi]
-```
-- You can show chiplet-IDs and PHY-IDs by passing the `-sci` and `-spi` flags respectively.
-
-
-You can also visualize a single chiplet by running
-
-```bash
-python3 visualizer.py -cf inputs/chiplets/<chiplet_file> -cn <chiplet_name>
-```
-
-- `<chiplet_file>` is an input file which potentially specifies multiple chiplets and `<chiplet_name>` is the name of one specific chiplet within this file.
-
-### Visualizing Results
-
-Visualize the results by running:
-
-```bash
-python3 create_plots.py -rf results/<results-file> -pt <plot_type>
-```
-
-- The `<results_file>` contains the results you want to visualize.
-- Currently, only one plot type, namely, `latency_vs_load` is supported, but more will be added soon.
-
-
-## References
-
-[1] Jiang, N., Becker, D.U., Michelogiannakis, G., Balfour, J., Towles, B., Shaw, D.E., Kim, J. and Dally, W.J., 2013, April. A detailed and flexible cycle-accurate network-on-chip simulator. In 2013 IEEE international symposium on performance analysis of systems and software (ISPASS) (pp. 86-96). IEEE.
-
-[2] https://github.com/booksim/booksim2
-
-[3] Hestness, J., Grot, B. and Keckler, S.W., 2010, December. Netrace: dependency-driven trace-based network-on-chip simulation. In Proceedings of the Third International Workshop on Network on Chip Architectures (pp. 31-36).
-
-[4] https://github.com/booksim/netrace
-
-[5] https://www.cs.utexas.edu/~netrace/
+Repository cleanup candidates are documented without deletion in [docs/CLEANUP_RECOMMENDATIONS.md](docs/CLEANUP_RECOMMENDATIONS.md).
